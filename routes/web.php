@@ -28,7 +28,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])
         ->name('profile.update');
 
-    Route::resource('tasks', \App\Http\Controllers\TaskController::class);
+    // Route::resource('tasks', \App\Http\Controllers\TaskController::class);
 });
 
 require __DIR__.'/auth.php';
