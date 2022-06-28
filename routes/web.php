@@ -31,4 +31,10 @@ Route::group(['middleware' => 'auth'], function() {
     // Route::resource('tasks', \App\Http\Controllers\TaskController::class);
 });
 
+Route::get('/master', function () {
+    return view('layouts/master');
+});
+
+// Route::view('/master', 'master')->name('master');
+
 require __DIR__.'/auth.php';
