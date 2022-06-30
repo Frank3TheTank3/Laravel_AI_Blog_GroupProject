@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('master')
 
 
 @section('content')
@@ -6,34 +6,24 @@
   welches dieses layout "extended" -->
 
 <div class="content">
-   <div class="titles">
-      LISTED MOVIES
+   <div class="section">
+     LATEST NEWS
    </div>
-   <div class="listed-movies">
-      <ul class="movies-ul">
-         @foreach ($movies as $movie)
-         <li class="movies-li">
+   <div class="">
+      <ul class="articles">
+         @foreach ($articles as $article)
+         <li class="articles-li">
             <b>
-            <img class="img-cover" src="data:image/jpg;base64,{{ chunk_split(base64_encode($movie->cover))}}"></br>
-               <div class="movie-title">
-                  {{$movie->title}}
+               <div class="title">
+                  {{$article->post_title}}
                </div>
-            </b><br>
+               <div class="content">
+               {{$article->post_abstract}}
+               </div>
+            <img class="img-cov" src="data:image/jpg;base64,{{ chunk_split(base64_encode($article->img_01))}}"></br></b><br>
          </li>
          @endforeach
       </ul>
    </div>
 </div>
 @endsection
-@foreach ($messages as $message)
-        <div class="p-2 bg-light border">
-            <div class="d-flex m-4">
-                <b><img class="m-2" style="width: 50px; border-radius: 50%"
-                        src="https://avatars.githubusercontent.com/u/98747637?v=4
-                        " alt="">
-                    <!-- this link to the message details is created dynamically
-                                and will point to /messages/1 for the first message -->
-                    <a href="/message/{{ $message->id }}">{{ $message->title }}:</a>
-
-                </b><br>
-            </div>
