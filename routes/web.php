@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
 
 
 /*
@@ -31,10 +32,10 @@ Route::group(['middleware' => 'auth'], function() {
 });
 
 Route::get('/master', function () {
-    return view('layouts/master');
+    return redirect('articles');
 });
 Route::resources([
-    'article' => ArticleController::class
+    'articles' => ArticleController::class
 ]);
 
 // Route::view('/master', 'master')->name('master');

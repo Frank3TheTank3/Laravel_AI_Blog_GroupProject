@@ -10280,6 +10280,7 @@ ul {
   align-self: center;
   color: #6397dd;
   font-weight: bolder;
+  font-size: 40px;
 }
 
 .header-hero {
@@ -11031,12 +11032,6 @@ select {
 }
 .-ml-px {
   margin-left: -1px;
-}
-.mt-3 {
-  margin-top: 0.75rem;
-}
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 .ml-1 {
   margin-left: 0.25rem;

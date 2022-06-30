@@ -15,7 +15,10 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::all()->sortByDesc('created_at');
-        return view('layouts/master', ['messages' => $articles]);
+
+
+        return view('articles', ['articles' => $articles]);
+
     }
 
     /**
