@@ -1,8 +1,88 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css2?family=Armata&display=swap");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+$font-stack: armata;
+$primary-color: #ff914d;
+$secondary-color: #5e17eb;
+$text-color: #000000;
+$nav-color: #273e82;
+$heading-color: #6397dd;
+$background-color: #e8e9ea;
+$align-self: center;
+$font-weight: bolder;
+$text-decoration: none;
+$max-width: 80%;
+$padding: 2rem;
+$padding-top: 0;
+$padding-bottom: 0;
+$padding-left: 2rem;
+$padding-right: 2rem;
+$display:flex;
+$flex-direction: row;
+$justify-content: center;
+$margin-left: 2rem;
+$margin-right: 2rem;
+
+
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+    font: 100% $font-stack;
+}
+
+#navbar {
+    color: $primary-color;
+    background-color: $nav-color;
+    text-decoration: $text-decoration;
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+}
+ul{
+    background-color: $nav-color;
+
+}
+.nav-link {
+    color: $primary-color;
+    font-weight: $font-weight;
+}
+.heading {
+    align-self: $align-self;
+    color: $heading-color;
+    font-weight: $font-weight;
+}
+.header-hero {
+    padding: $padding;
+    padding-top: $padding-top;
+}
+.section {
+    color: $primary-color;
+}
+.title {
+    color: $secondary-color;
+}
+
+footer{
+    padding: $padding;
+    padding-bottom: $padding-bottom;
+}
+.copyright{
+    align-items: $align-self;
+}
+b{
+    display: $display;
+    align-self: $align-self;
+    color: $heading-color;
+    justify-content: $justify-content;
+
+}
+svg{
+    align-self: $align-self;
+}

@@ -33,6 +33,9 @@ Route::group(['middleware' => 'auth'], function() {
 Route::get('/master', function () {
     return view('layouts/master');
 });
+Route::resources([
+    'article' => ArticleController::class
+]);
 
 // Route::view('/master', 'master')->name('master');
 
