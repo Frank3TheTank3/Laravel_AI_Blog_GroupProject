@@ -13,7 +13,9 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {messagesrticleses' => $article]);
+    {
+        $articles = Article::all()->sortByDesc('created_at');
+        return view('articles', ['articles' => $articles]);
     }
 
     /**
@@ -22,7 +24,7 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {messages
+    {
         //
     }
 
