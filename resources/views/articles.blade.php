@@ -17,7 +17,7 @@
                <div class="title">
                   {{$article->post_title}}
                </div>
-               <div class="content">
+               <div class="text">
                {{$article->post_abstract}}
                </div>
             <img class="img-cov" src="data:image/jpg;base64,{{ chunk_split(base64_encode($article->img_01))}}"></br></b><br>
