@@ -9,12 +9,11 @@
 </head>
 
 <body>
-
-  <body>
     <div class="d-flex justify-content-center">
       <a href="/"><img id="logo" class="img-responsive" src="{{('img/favicon.png')}}" data-bs-hover-animate="pulse" alt="logo" style="height: 48px;"></a>
       <div class="heading">
         COOLEST ARTIFICIAL INTELIGENCE NEWSPAPER
+
       </div>
     </div>
     <!--BANNER-->
