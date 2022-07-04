@@ -17,7 +17,7 @@ class ArticleController extends Controller
         $articles = Article::all()->sortByDesc('created_at');
 
 
-        return view('articles', ['articles' => $articles]);
+        return view('contents', ['articles' => $articles]);
 
     }
 
@@ -50,7 +50,10 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //
+        $article = Article::findOrFail($id);
+        $paragraphs = preg_split("/\*/", $article->post_text);
+        $hashtags = preg_split("/\*/", $article->hashtag);
+        return view('article', ['article' => $article, 'paragraph' => $paragraphs, 'hashtag' => $hashtags]);
     }
 
     /**
