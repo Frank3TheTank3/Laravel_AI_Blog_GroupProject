@@ -9,10 +9,14 @@
 </head>
 
 <body>
+     {{-- @section('nav-bar')
+    This is the master sidebar.
+    @show --}}
 
-  <body>
+    {{-- @yield('nav-bar') --}}
+
     <div class="d-flex justify-content-center">
-      <a href="/"><img id="logo" class="img-responsive" src="img/favicon.png" data-bs-hover-animate="pulse" alt="logo" style="height: 48px;"></a>
+      <a href="/"><img id="logo" class="img-responsive"  src="img/favicon.png" data-bs-hover-animate="pulse" alt="logo" style="height: 48px;"></a>
       <div class="heading">
         COOLEST ARTIFICIAL INTELIGENCE NEWSPAPER
       </div>
@@ -48,7 +52,6 @@
    welches dieses layout "extended" -->
     @yield('content')
 
-
     <!--FOOTER-->
     <footer>
       <video src="{{('img/footerVid.mp4')}}" type="video/mp4" class="d-block w-100" autoplay loop muted>
@@ -58,6 +61,7 @@
         </svg></b>
       </div>
     </footer>
+
   </body>
 
 </html>
