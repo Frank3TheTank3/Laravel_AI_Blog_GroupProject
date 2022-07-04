@@ -17,3 +17,4 @@ mix.js('resources/js/app.js','public/js').postCss('resources/css/app.css', 'publ
     require('autoprefixer'),
 ])
 .sass('resources/sass/app.scss','public/css')
+.styles('resources/css/luStyles.css', 'public/css/luStyles.css')
