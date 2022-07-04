@@ -10990,6 +10990,39 @@ select {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+
+  .container {
+    max-width: 1536px;
+  }
+}
 .fixed {
   position: fixed;
 }
@@ -11014,15 +11047,6 @@ select {
 .z-50 {
   z-index: 50;
 }
-.m-5 {
-  margin: 1.25rem;
-}
-.m-4 {
-  margin: 1rem;
-}
-.m-2 {
-  margin: 0.5rem;
-}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -11033,11 +11057,17 @@ select {
 .-ml-px {
   margin-left: -1px;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .ml-1 {
   margin-left: 0.25rem;
 }
 .-mr-2 {
   margin-right: -0.5rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
 }
 .mb-4 {
   margin-bottom: 1rem;
@@ -11080,9 +11110,6 @@ select {
 }
 .inline-flex {
   display: inline-flex;
-}
-.table {
-  display: table;
 }
 .grid {
   display: grid;
@@ -11141,11 +11168,11 @@ select {
 .max-w-7xl {
   max-width: 80rem;
 }
-.max-w-6xl {
-  max-width: 72rem;
-}
 .max-w-xl {
   max-width: 36rem;
+}
+.max-w-6xl {
+  max-width: 72rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -11184,11 +11211,11 @@ select {
 .list-disc {
   list-style-type: disc;
 }
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -11431,10 +11458,6 @@ select {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
-}
 .text-green-600 {
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
@@ -11462,6 +11485,10 @@ select {
 .text-red-800 {
   --tw-text-opacity: 1;
   color: rgb(153 27 27 / var(--tw-text-opacity));
+}
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 .text-indigo-600 {
   --tw-text-opacity: 1;
