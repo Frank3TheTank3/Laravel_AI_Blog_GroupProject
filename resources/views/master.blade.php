@@ -6,7 +6,18 @@
   <script src="{{asset('js/app.js')}}" defer></script>
   <!-- Styles -->
   <link href="{{asset('css/app.css')}}" rel="stylesheet">
+
+
+  <script src="{{asset('js/chat.js')}}" defer></script>
+
+
+
+  <link href="{{asset('css/chatbot.css')}}" rel="stylesheet">
+
+
+
   <link href="{{asset('css/mainstyles.css')}}" rel="stylesheet">
+
 </head>
 
 <body>
@@ -35,32 +46,54 @@
       <hr>
     </div>
 
- 
+    <!--NAVBAR-->
+    <nav class="nav justify-content-center" id="navbar">
+      <div class="nav">
+        <ul class="nav justify-content-center">
+          <li>
+            <a href="/articles" class="nav-link">HOME</a>
+          </li>
+          <li>
+            <a href="/" class="nav-link ">ABOUT US</a>
+          </li>
+          <li>
+            <a href="{{ route('register') }}" class="nav-link ">REGISTER</a>
+          </li>
+          <li>
+            <a href="/login" class="nav-link ">LOG IN</a>
+          </li>
+          <li>
 
-  <!--NAVBAR-->
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <x-dropdown-link :href="route('logout')"
+                        onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                    {{ __('Log Out') }}
+                </x-dropdown-link>
+            </form>
 
-  <nav class="nav justify-content-center" id="navbar">
-    <div class="nav">
-      <ul class="nav justify-content-center">
-        <li>
-          <a href="/" class="nav-link">HOME</a>
-        </li>
-        <li>
-          <a href="/" class="nav-link ">ABOUT US</a>
-        </li>
-        <li>
-          <a href="/" class="nav-link ">REGISTER</a>
-        </li>
-        <li>
-          <a href="/" class="nav-link ">LOG IN</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  
   </header>
 
  <!-- hier wird der Wert von der section "content" eines blade templates ausgefüllt, welches dieses layout "extended" -->
 @yield('content')
+
+ <div class="bodycontainer">
+    <div id="container" class="container">
+        <img src="https://cdn-icons-png.flaticon.com/512/2885/2885504.png" height="200vh" alt="Chatbot clipart">
+         <div id="chat" class="chat">
+          <div id="messages" class="messages"></div>
+          <input id="input" type="text" placeholder="Write something..." autocomplete="off" autofocus="true" />
+        </div>
+      </div>
+    </div>
 
 <!--FOOTER-->
 <footer>
@@ -72,6 +105,9 @@
     </svg></b>
   </div>
 </footer>
+   
+    
+  
 
 </body>
 
