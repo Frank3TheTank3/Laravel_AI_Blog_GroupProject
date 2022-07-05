@@ -39,56 +39,61 @@
                 </div>
             </div>
         </div>
+        @if (Auth::check()) {
+        <div class="p-2 bg-light border rounded-pill text-center">
+            <h2>Say something: </h2>
 
+
+
+                <form action="/articles" method="post">
+                    <input type="text" name="title" placeholder="Post-Title">
+                    <input type="text" name="content" placeholder="Your message...">
+                    <!-- this blade directive is necessary for all form posts somewhere in between
+                            the form tags -->
+                            @csrf
+                    @method('post')
+
+
+                <button class="rounded-pill " type="submit">Submit</button>
+            </form>
+        </div>
+    }
+    @endif
 
     </div>
 
+    @foreach ($comments as $comment)
+
+    <div class="p-2 bg-light border rounded-pill text-center">
+
+            <b>
+                <img class="mx-auto d-block" style="width: 50px; border-radius: 50%"
+                    src="https://avatars.githubusercontent.com/u/98747637?v=4
+                    " alt="">
+                    @if (Auth::check()) {
+                    <h1>{{Auth::user()->name}} </h1>
+                    }
+                    @endif
+                    <br>
+                <h1> {{ $comment->comment_title }}: </h1>
+            </b><br>
+
+        {{ $comment->comment_content }}<br>
+
+            {{ $comment->updated_at->diffForHumans() }}
+            <form action="/articles/{{ $comment->id }}" method="post">
+                @csrf
+                @method('delete')
+                <button type="submit">Delete</button>
+            </form>
 
 
-    @section('nav-bar')
-        <!-- hier wird der Wert von der section "content" eines blade templates ausgefüllt,
-          welches dieses layout "extended" -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    @stop
+    </div>
+@endforeach
+
+
+
+
 
 
 

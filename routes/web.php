@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CommentController;
 
 
 /*
@@ -36,7 +37,9 @@ Route::group(['middleware' => 'auth'], function() {
 //     return redirect('articles');
 // });
 Route::resources([
+    'articles' => CommentController::class,
     'articles' => ArticleController::class
+
 ]);
 
 // Route::view('/master', 'master')->name('master');
