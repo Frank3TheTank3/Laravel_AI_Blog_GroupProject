@@ -12,12 +12,15 @@
             <h1 style="font-size: 35px">{{ $article->post_title }}</h1>
             <br>
             <div class="container">
+
             @foreach ($hashtag as $hash)
                 {{ $hash }} <br>
             @endforeach
+
             <br>
         </div>
     </div>
+
         </div>
         <div class="container">
             <div class="row">
@@ -25,14 +28,17 @@
                     {{ $article->post_title }}
                 </div>
                 <div class="col">
-                    {{-- {{$article->post_text}} --}}
+                    <!-- {{-- {{$article->post_text}} --}} -->
+
                     @foreach ($paragraph as $para)
                         {{ $para }} <br><br>
 
                         @if ($loop->first)
                             <img src="/img/{{ $article->img_01 }}" height="150px">
                         @endif
+                        
                     @endforeach
+
                 </div>
                 <div class="col">
                     <img src="/img/{{ $article->img_02 }}" height="150px">
