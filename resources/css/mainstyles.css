@@ -1,65 +1,98 @@
-
-
-
 body {
-    background-color: #e8e9ea;
+    background-color: #ffffff;
+    font-weight: lighter;
+    font: 100% Roboto;
     color: #000000;
-    font: 100% armata;
-  }
-  
-  #navbar {
+}
+
+#navbar {
     color: #ff914d;
-    background-color: #273e82;
+    background-color: #5e17eb;
     text-decoration: none;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-  
-  ul {
-    background-color: #273e82;
-  }
-  
-  .nav-link {
+    /*margin-left: 2rem;
+    margin-right: 2rem;*/
+}
+
+
+ul {
+    background-color: #5e17eb;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.nav-link {
+    color: #ffffff;
+    background-color: #5e17eb;
+    font-weight: bolder;
+}
+
+.heading {
+    padding: 1rem;
     color: #ff914d;
-    font-weight: bolder;
-  }
-  
-  .heading {
-    align-self: center;
-    color: #6397dd;
-    font-weight: bolder;
-    font-size: 30px;
-  }
-  
-  .header-hero {
-    padding: 2rem;
+    background-color: #5e17eb;
+    font-weight: normal;
+    font-style: italic;
+    /*font-family: "Times New Roman", Times, serif;*/
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+}
+
+.header-banner {
+    background-color: #5e17eb;
+    /*padding: 2rem;*/
     padding-top: 0;
+}
+
+@media only screen and (max-width: 700px) { /*media query*/
+  .header-height {
+    margin-top: 200px;
   }
-  
-  .section {
-    color: #ff914d;
+}
+
+@media only screen and (min-width: 701px) {/*media query*/
+  .header-height {
+    margin-top: 300px;
   }
-  
-  .title {
-    color: #5e17eb;
-  }
-  
-  footer {
+}
+
+.section {
     padding: 2rem;
+    color: #ff914d;
+}
+
+.postdate {
+    color: #ff914d;
+    font-weight: normal;
+}
+
+.postitle {
+    color: #5e17eb;
+    font-weight: normal;
+    font-style: italic;
+    /*font-family: "Times New Roman", Times, serif;*/
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.footer {
+    padding: 0;
     padding-bottom: 0;
-  }
-  
-  .copyright {
+}
+
+.copyright {
     align-items: center;
-  }
-  
-  b {
+}
+
+b {
     display: flex;
     align-self: center;
     color: #6397dd;
     justify-content: center;
-  }
-  
-  svg {
+}
+
+svg {
     align-self: center;
-  }
+}

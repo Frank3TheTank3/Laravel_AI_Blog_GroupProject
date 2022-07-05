@@ -1,40 +1,37 @@
 @extends('master')
-
-{{-- @include('nav') --}}
 @section('content')
 
 <!-- hier wird der Wert von der section "content" eines blade templates ausgefüllt,
   welches dieses layout "extended" -->
 
 <div class="content">
-   <div class="section" style="font-size: 35px">
+  <div class="section" style="font-size: 30px">
+    <div class="container header-height">
+      LATEST NEWS
+    </div>
+  </div>
+  @foreach ($articles as $article)
+
+  <a href="/articles/{{ $article->id }}">
+
     <div class="container">
-     LATEST NEWS
-   </div>
-</div>
-   @foreach ($articles as $article)
 
-   <a href="/articles/{{ $article->id }}">
+      <div class="row">
 
-   <div class="container">
+        <div class="col">
+          <div class="postitle">{{$article->post_title}}</div>
+          <div class="postdate">{{$article->post_date}}</div>
+          <div class="postauthor">{{$article->post_author}}</div>
+        </div>
 
-    <div class="row">
+        <div class="col">{{$article->post_abstract}}</div>
+        <div class="col"><img src="img/{{$article->img_01}}" height="150px"></div>
 
-      <div class="col">
-        {{$article->post_title}}
-      </div>
-      <div class="col">
-        {{$article->post_abstract}}
-      </div>
-      <div class="col">
-        <img src="img/{{$article->img_01}}" height="150px" >
       </div>
 
     </div>
 
-  </div>
-
-</a>
+  </a>
   @endforeach
 
 
@@ -45,7 +42,7 @@
 @section('nav-bar')
 <!-- hier wird der Wert von der section "content" eines blade templates ausgefüllt,
   welches dieses layout "extended" -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +63,9 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
@@ -86,4 +85,3 @@
 
 
 @endsection
-
