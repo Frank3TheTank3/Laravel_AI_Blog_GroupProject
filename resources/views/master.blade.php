@@ -7,12 +7,16 @@
   <!-- Styles -->
   <link href="{{asset('css/app.css')}}" rel="stylesheet">
 
+
   <script src="{{asset('js/chat.js')}}" defer></script>
 
 
 
   <link href="{{asset('css/chatbot.css')}}" rel="stylesheet">
 
+
+
+  <link href="{{asset('css/mainstyles.css')}}" rel="stylesheet">
 
 </head>
 
