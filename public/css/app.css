@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @import url(https://fonts.googleapis.com/css2?family=Armata&display=swap);
-@charset "UTF-8";
+
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10252,68 +10252,6 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-body {
-  background-color: #e8e9ea;
-  color: #000000;
-  font: 100% armata;
-}
-
-#navbar {
-  color: #ff914d;
-  background-color: #273e82;
-  text-decoration: none;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-
-ul {
-  background-color: #273e82;
-}
-
-.nav-link {
-  color: #ff914d;
-  font-weight: bolder;
-}
-
-.heading {
-  align-self: center;
-  color: #6397dd;
-  font-weight: bolder;
-  font-size: 40px;
-}
-
-.header-hero {
-  padding: 2rem;
-  padding-top: 0;
-}
-
-.section {
-  color: #ff914d;
-}
-
-.title {
-  color: #5e17eb;
-}
-
-footer {
-  padding: 2rem;
-  padding-bottom: 0;
-}
-
-.copyright {
-  align-items: center;
-}
-
-b {
-  display: flex;
-  align-self: center;
-  color: #6397dd;
-  justify-content: center;
-}
-
-svg {
-  align-self: center;
 }
 /*
 ! tailwindcss v3.1.4 | MIT License | https://tailwindcss.com
