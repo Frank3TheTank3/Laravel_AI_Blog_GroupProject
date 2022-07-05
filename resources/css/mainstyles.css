@@ -18,6 +18,10 @@ ul {
     background-color: #5e17eb;
 }
 
+header{
+  z-index: 1;
+}
+
 .fixed {
     position: fixed;
 }
@@ -54,7 +58,7 @@ ul {
 
 @media only screen and (min-width: 701px) {/*media query*/
   .header-height {
-    margin-top: 300px;
+    margin-top: 400px;
   }
 }
 
