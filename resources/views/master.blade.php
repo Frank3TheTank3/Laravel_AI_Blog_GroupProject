@@ -6,7 +6,18 @@
   <script src="{{asset('js/app.js')}}" defer></script>
   <!-- Styles -->
   <link href="{{asset('css/app.css')}}" rel="stylesheet">
+
+
+  <script src="{{asset('js/chat.js')}}" defer></script>
+
+
+
+  <link href="{{asset('css/chatbot.css')}}" rel="stylesheet">
+
+
+
   <link href="{{asset('css/mainstyles.css')}}" rel="stylesheet">
+
 </head>
 
 <body>
@@ -34,16 +45,19 @@
       <div class="nav">
         <ul class="nav justify-content-center">
           <li>
-            <a href="/" class="nav-link">HOME</a>
+            <a href="/articles" class="nav-link">HOME</a>
           </li>
           <li>
             <a href="/" class="nav-link ">ABOUT US</a>
           </li>
           <li>
-            <a href="/" class="nav-link ">REGISTER</a>
+            <a href="{{ route('register') }}" class="nav-link ">REGISTER</a>
           </li>
           <li>
-            <a href="/" class="nav-link ">LOG IN</a>
+            <a href="/login" class="nav-link ">LOG IN</a>
+          </li>
+          <li>
+            <a href="{{route('logout')}}" class="nav-link ">LOG OUT</a>
           </li>
         </ul>
       </div>
@@ -53,6 +67,15 @@
    welches dieses layout "extended" -->
     @yield('content')
 
+    <div class="bodycontainer">
+    <div id="container" class="container">
+        <img src="https://cdn-icons-png.flaticon.com/512/2885/2885504.png" height="200vh" alt="Chatbot clipart">
+         <div id="chat" class="chat">
+          <div id="messages" class="messages"></div>
+          <input id="input" type="text" placeholder="Write something..." autocomplete="off" autofocus="true" />
+        </div>
+      </div>
+    </div>
     <!--FOOTER-->
     <footer>
       <video src="{{('img/footerVid.mp4')}}" type="video/mp4" class="d-block w-100" autoplay loop muted>
