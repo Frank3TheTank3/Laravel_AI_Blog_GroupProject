@@ -16,7 +16,8 @@ use App\Http\Controllers\ArticleController;
 */
 
 Route::get('/', function () {
-    return view('auth/login');
+    // return view('/master');
+    return redirect('articles');
 });
 
 Route::group(['middleware' => 'auth'], function() {
@@ -31,9 +32,9 @@ Route::group(['middleware' => 'auth'], function() {
     // Route::resource('tasks', \App\Http\Controllers\TaskController::class);
 });
 
-Route::get('/master', function () {
-    return redirect('articles');
-});
+// Route::get('/master', function () {
+//     return redirect('articles');
+// });
 Route::resources([
     'articles' => ArticleController::class
 ]);

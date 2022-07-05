@@ -33,16 +33,19 @@
       <div class="nav">
         <ul class="nav justify-content-center">
           <li>
-            <a href="/" class="nav-link">HOME</a>
+            <a href="/articles" class="nav-link">HOME</a>
           </li>
           <li>
             <a href="/" class="nav-link ">ABOUT US</a>
           </li>
           <li>
-            <a href="/" class="nav-link ">REGISTER</a>
+            <a href="{{ route('register') }}" class="nav-link ">REGISTER</a>
           </li>
           <li>
-            <a href="/" class="nav-link ">LOG IN</a>
+            <a href="/login" class="nav-link ">LOG IN</a>
+          </li>
+          <li>
+            <a href="{{route('logout')}}" class="nav-link ">LOG OUT</a>
           </li>
         </ul>
       </div>
