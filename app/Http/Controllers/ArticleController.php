@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Comment;
 use App\Models\Article;
 use Illuminate\Http\Request;
 
@@ -14,10 +14,12 @@ class ArticleController extends Controller
      */
     public function index()
     {
+        $comments = Comment::all()->sortByDesc('created_at');
         $articles = Article::all()->sortByDesc('created_at');
 
 
-        return view('contents', ['articles' => $articles]);
+        return view('contents', ['articles' => $articles, 'comments' => $comments]);
+
 
     }
 
@@ -39,7 +41,12 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $comment = new Comment();
+        $comment->comment_title = $request->title;
+        $comment->comment_content = $request->content;
+        $comment->comment_author = Auth::user()->name;
+        $comment->save();
+        return redirect('/articles');
     }
 
     /**
@@ -50,10 +57,13 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
+        $comments = Comment::all()->sortByDesc('created_at');
         $article = Article::findOrFail($id);
         $paragraphs = preg_split("/\*/", $article->post_text);
         $hashtags = preg_split("/\*/", $article->hashtag);
-        return view('article', ['article' => $article, 'paragraph' => $paragraphs, 'hashtag' => $hashtags]);
+        return view('article', ['article' => $article, 'paragraph' => $paragraphs, 'hashtag' => $hashtags, 'comments' => $comments]);
+
+
     }
 
     /**
@@ -87,6 +97,7 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $result = Comment::findOrFail($id)->delete();
+        return redirect('/articles');
     }
 }
