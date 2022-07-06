@@ -1,15 +1,16 @@
 @extends('master')
 @section('content')
-<div class="content">
+<div class="content ">
 
   <!-- grid title -->
-  <div class="section" style="font-size: 30px">
+  <div class="section containerheight" style="font-size: 30px">
 
-    <div class="container header-height">
+  
+  </div>
+
+  <div class="container section">
       LATEST NEWS
     </div>
-
-  </div>
 
   @foreach ($articles as $article)
 

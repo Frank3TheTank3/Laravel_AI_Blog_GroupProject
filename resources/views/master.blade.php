@@ -19,18 +19,12 @@
 
 <body>
 
-  {{-- @section('nav-bar')
-    This is the master sidebar.
-    @show --}}
-
-  {{-- @yield('nav-bar') --}}
-
-</div>
+  
   <!-- banner - commented by lu-meili-->
   <header class="fixed">
     
     <div>
-      <img src="{{('img/header-banner.png')}}" alt="this is a banner">
+      <img src="{{('/img/header-banner.png')}}" alt="this is a banner">
     </div>
     <div class="d-flex justify-content-center">
       <!-- deleted featured - commented by lu-meili-->

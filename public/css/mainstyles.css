@@ -29,6 +29,11 @@ header{
     position: fixed;
 }
 
+.containerheight{
+    min-height: 300px;
+}
+
+
 .nav-link {
     color: #ffffff;
     background-color: #5e17eb;
@@ -47,9 +52,6 @@ header{
     text-align: center;
 }
 
-.containerheight{
-    min-height: 300px;
-}
 
 .postabstract{
     font-size: 18px;
@@ -88,6 +90,14 @@ header{
   }
 }
 
+
+  
+  @media only screen and (min-width: 701px) {/*media query*/
+    .containerheight {
+        min-height: 400px;
+    }
+  }
+
 .section {
     padding: 2rem;
     color: #ff914d;
@@ -116,6 +126,16 @@ header{
     font-weight: normal;
     padding-bottom: 10px;
     font-size: 34px;
+}
+
+.sideimage img{
+    width: 300px;
+    opacity: 55%;
+}
+
+.aligntitleleft{
+
+    justify-content: left;
 }
 
 .postauthor{
