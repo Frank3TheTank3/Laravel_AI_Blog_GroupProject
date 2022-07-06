@@ -1,6 +1,7 @@
 
 
   .bodycontainer {
+      z-index: 2;
       position: fixed;
       right: 10%;
       bottom:29%;
