@@ -6,9 +6,41 @@ Aline, Chaimaa, Chantal, Francis (Team Leader), Lu, and Thomas
 
 Team contract in #AI team Google Drive [link](https://docs.google.com/document/d/1qksD0JsKhCeg9ig_XURdAi1wQG9xeVNFaiYDEMitX9c/edit?usp=sharing).
 
+## How to install after cloning the repository?
 
+Create Vendor Folder by installing the latest composer to the project (run in terminal in project folder)
 
+docker run --rm \
+-u "$(id -u):$(id -g)" \
+-v $(pwd):/var/www/html \
+-w /var/www/html \
+laravelsail/php81-composer:latest \
+composer install --ignore-platform-reqs
 
+**Copy .env-example and rename it to .env
+
+Go to DB and change the password and username if wished.**
+
+DB_USERNAME=sail
+DB_PASSWORD=password
+
+Make sure DB_CONNECTION is set to 'mysql'.
+
+DB_CONNECTION=mysql
+DB_HOST=mysql
+
+Fix run watch by typing this command in the terminal in the project folder:
+
+sail npm install && sail npm run dev
+
+or
+
+npm install autoprefixer@10.4.5 --save-exact
+
+## How to migrate and seed the database?
+
+sail artisan migrate
+sail artisan db:seed
 
 ##
 
