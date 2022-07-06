@@ -5,8 +5,8 @@
 <!-- hier wird der Wert von der section "content" eines blade templates ausgefüllt,
   welches dieses layout "extended" -->
 
-<div class="content">
-   <div class="section" style="padding:2rem; font-weight:bolder; font-size:2rem;">
+<div class="content" style="margin-left: 0; padding-left:0;">
+   <div class="section" style="padding-left: 19rem;font-weight:bolder; font-size:2rem;">
       LATEST NEWS
    </div>
 
@@ -14,7 +14,7 @@
       @foreach ($articles as $article)
 
       <div class="row" id="article">
-         <div class="col-sm" id="title" style="color: #5e17eb; padding:2rem; font-weight:bolder; font-size:larger;">
+         <div class="col-sm" id="title" style="color: #5e17eb; padding:2rem; font-weight:bolder; font-size:1.5rem;">
             {{$article->post_title}}
          </div>
          <div class="col-sm" id="text" style="padding:2rem;">
