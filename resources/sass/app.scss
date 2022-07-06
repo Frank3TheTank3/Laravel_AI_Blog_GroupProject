@@ -24,24 +24,27 @@ $padding-top: 0;
 $padding-bottom: 0;
 $padding-left: 2rem;
 $padding-right: 2rem;
-$display:flex;
+$display: flex;
 $flex-direction: row;
 $justify-content: center;
 $margin-left: 2rem;
 $margin-right: 2rem;
 $font-size: 40px;
-
-
-
-
-
+$section-font: 50px;
 
 body {
     background-color: $background-color;
     color: $text-color;
     font: 100% $font-stack;
 }
-
+/*HEADING*/
+.heading {
+    align-self: $align-self;
+    color: $heading-color;
+    font-weight: $font-weight;
+    font-size: $font-size;
+}
+/*NAV*/
 #navbar {
     color: $primary-color;
     background-color: $nav-color;
@@ -49,50 +52,52 @@ body {
     margin-left: $margin-left;
     margin-right: $margin-right;
 }
-ul{
-    background-color: $nav-color;
 
-}
 .nav-link {
     color: $primary-color;
     font-weight: $font-weight;
 }
-.heading {
-    align-self: $align-self;
-    color: $heading-color;
-    font-weight: $font-weight;
-    font-size: $font-size;
+.nav-link:hover {
+    color: $secondary-color;
 }
 .header-hero {
     padding: $padding;
     padding-top: $padding-top;
 }
 
-.content{
+/*PAGE*/
+.content {
     padding: $padding;
-    background-color: $background-color;
-}
-.section {
-    color: $primary-color;
-}
-.title {
-    color: $secondary-color;
+    padding-top: $padding;
 }
 
-footer{
+.section {
+    color: $primary-color;
+    font-weight: $font-weight;
+    font-size: $section-font;
+}
+#article {
+    padding: $padding;
+}
+
+#title {
+    color: $secondary-color;
+    font-weight: $font-weight;
+    padding: $padding;
+}
+#text {
+    color: $text-color;
+    padding: $padding;
+}
+
+footer {
     padding: $padding;
     padding-bottom: $padding-bottom;
 }
-.copyright{
+.copyright {
     align-items: $align-self;
 }
-b{
-    display: $display;
-    align-self: $align-self;
-    color: $heading-color;
-    justify-content: $justify-content;
 
-}
-svg{
+svg {
     align-self: $align-self;
 }
