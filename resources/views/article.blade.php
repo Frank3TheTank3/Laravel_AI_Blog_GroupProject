@@ -77,8 +77,7 @@
 
             <b>
                 <img class="mx-auto d-block" style="width: 50px; border-radius: 50%"
-                    src="https://avatars.githubusercontent.com/u/98747637?v=4
-                    " alt="">
+                    src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="">
                     @if (Auth::check()) {
                     <h1>{{Auth::user()->name}} </h1>
                     }
