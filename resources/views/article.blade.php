@@ -12,10 +12,12 @@
             <h1 style="font-size: 35px">{{ $article->post_title }}</h1>
             <br>
             <div class="container">
+                <div class="hashtags">
 
             @foreach ($hashtag as $hash)
                 {{ $hash }} <br>
             @endforeach
+        </div>
 
             <br>
         </div>
@@ -36,7 +38,7 @@
                         @if ($loop->first)
                             <img src="/img/{{ $article->img_01 }}" height="150px">
                         @endif
-                        
+
                     @endforeach
 
                 </div>
@@ -54,6 +56,7 @@
                 <form action="/articles" method="post">
                     <input type="text" name="title" placeholder="Post-Title">
                     <input type="text" name="content" placeholder="Your message...">
+                    <input class="d-none" type="text" name="article" value="{{ $article->post_title }}">
                     <!-- this blade directive is necessary for all form posts somewhere in between
                             the form tags -->
                             @csrf
@@ -87,11 +90,13 @@
         {{ $comment->comment_content }}<br>
 
             {{ $comment->updated_at->diffForHumans() }}
+            @if (Auth::check())
             <form action="/articles/{{ $comment->id }}" method="post">
                 @csrf
                 @method('delete')
                 <button type="submit">Delete</button>
             </form>
+            @endif
 
 
     </div>
