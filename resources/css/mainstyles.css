@@ -119,3 +119,15 @@ b {
 svg {
     align-self: center;
 }
+
+@media only screen and (max-width: 700px) { /*media query for logo for login*/
+    .logo-margin-sm {
+      margin-top: 3rem !important;
+    }
+  }
+  
+  @media only screen and (min-width: 701px) { /*media query for logo for login*/
+    .logo-margin-sm {
+      margin-top: 3rem !important;
+    }
+  }
