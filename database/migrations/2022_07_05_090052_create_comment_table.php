@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('comment_title');
             $table->string('comment_content');
-            $table->string('comment_author');
+         //   $table->string('comment_author');
             $table->timestamps();
         });
     }

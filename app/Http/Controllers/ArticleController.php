@@ -44,7 +44,7 @@ class ArticleController extends Controller
         $comment = new Comment();
         $comment->comment_title = $request->title;
         $comment->comment_content = $request->content;
-        $comment->comment_author = Auth::user()->name;
+       // $comment->comment_author = Auth::user()->name;
         $comment->save();
         return redirect('/articles');
     }
