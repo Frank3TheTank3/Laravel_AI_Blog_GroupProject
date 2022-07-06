@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&display=swap');
+
 body {
     background-color: #ffffff;
     font-weight: lighter;
-    font: 100% Roboto;
     color: #000000;
+    font-family: 'Roboto', sans-serif;
 }
 
 #navbar {
@@ -16,6 +18,10 @@ body {
 
 ul {
     background-color: #5e17eb;
+}
+
+header{
+  z-index: 1;
 }
 
 .fixed {
@@ -34,10 +40,23 @@ ul {
     background-color: #5e17eb;
     font-weight: normal;
     font-style: italic;
-    /*font-family: "Times New Roman", Times, serif;*/
+    font-family: "Times New Roman", Times, serif;
     font-size: 24px;
     width: 100%;
     text-align: center;
+}
+
+.containerheight{
+    min-height: 300px;
+}
+
+.postabstract{
+    font-size: 18px;
+
+}
+
+.postimage img{
+    border-radius: 4%;
 }
 
 .header-banner {
@@ -54,7 +73,7 @@ ul {
 
 @media only screen and (min-width: 701px) {/*media query*/
   .header-height {
-    margin-top: 300px;
+    margin-top: 400px;
   }
 }
 
@@ -72,14 +91,18 @@ ul {
     color: #5e17eb;
     font-weight: normal;
     font-style: italic;
-    /*font-family: "Times New Roman", Times, serif;*/
+    font-family: "Times New Roman", Times, serif;
     font-weight: normal;
     font-size: 28px;
+    line-height: 28px;
+}
+
+.postauthor{
+    font-size: 20px;
 }
 
 .footer {
-    padding: 0;
-    padding-bottom: 0;
+    width: 100%
 }
 
 .copyright {
