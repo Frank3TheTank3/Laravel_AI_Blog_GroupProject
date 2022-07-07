@@ -36,52 +36,61 @@
       <hr>
     </div>
 
-    <!-- navbar - commented by lu-meili-->
-    <nav class="nav justify-content-center" id="navbar">
-      <div class="nav">
-        <ul class="nav justify-content-center">
-          <li>
-            <a href="/articles" class="nav-link">HOME</a>
-          </li>
-          <li>
-            <a href="/" class="nav-link ">ABOUT US</a>
-          </li>
-          <li>
-            <a href="{{ route('register') }}" class="nav-link ">REGISTER</a>
-          </li>
-          <li>
-            <a href="/login" class="nav-link ">LOG IN</a>
-          </li>
-          <li>
+        <!--NAVBAR-->
+        <nav class="nav justify-content-center" id="navbar">
+            <div class="nav">
+                <ul class="nav justify-content-center">
+                    <li>
+                        <a href="/articles" class="nav-link">HOME</a>
+                    </li>
+                    <li>
+                        <a href="/" class="nav-link ">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('register') }}" class="nav-link ">REGISTER</a>
+                    </li>
+                    <li>
+                        <a href="/login" class="nav-link ">LOGIN</a>
+                    </li>
+                    <li>
+                        @if (Auth::check())
 
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <x-dropdown-link :href="route('logout')"
-                        onclick="event.preventDefault();
+                        <li>
+                            <a href="/profile" class="nav-link ">MY PROFILE</a>
+                        </li>
+
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
                                     this.closest('form').submit();">
-                    {{ __('LOG OUT') }}
-                </x-dropdown-link>
-            </form>
+                                    {{ __('LOGOUT') }}
+                                </x-dropdown-link>
+                            </form>
 
-          </li>
-        </ul>
-      </div>
-    </nav>
+                        @endif
 
 
-  </header>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
- <!-- hier wird der Wert von der section "content" eines blade templates ausgefüllt, welches dieses layout "extended" -->
-@yield('content')
 
- <div class="bodycontainer">
-    <div id="container" class="container">
-        <img src="https://cdn-icons-png.flaticon.com/512/2885/2885504.png" height="200vh" alt="Chatbot clipart">
-         <div id="chat" class="chat">
-          <div id="messages" class="messages"></div>
-          <input id="input" type="text" placeholder="Write something..." autocomplete="off" autofocus="true" />
+    </header>
+
+    <!-- hier wird der Wert von der section "content" eines blade templates ausgefüllt, welches dieses layout "extended" -->
+    @yield('content')
+
+    <div class="bodycontainer">
+        <div id="container" class="container">
+            <img src="https://cdn-icons-png.flaticon.com/512/2885/2885504.png" height="200vh" alt="Chatbot clipart">
+            <div id="chat" class="chat">
+                <div id="messages" class="messages"></div>
+                <input id="input" type="text" placeholder="Write something..." autocomplete="off"
+                    autofocus="true" />
+            </div>
         </div>
-      </div>
     </div>
 
 <!--FOOTER-->

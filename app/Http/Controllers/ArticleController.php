@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Comment;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -14,11 +15,11 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $comments = Comment::all()->sortByDesc('created_at');
+        $comment = Comment::all()->sortByDesc('created_at');
         $articles = Article::all()->sortByDesc('created_at');
 
 
-        return view('contents', ['articles' => $articles, 'comments' => $comments]);
+        return view('contents', ['articles' => $articles, 'comment' => $comment]);
 
 
     }
@@ -45,6 +46,7 @@ class ArticleController extends Controller
         $comment->comment_title = $request->title;
         $comment->comment_content = $request->content;
         $comment->comment_author = Auth::user()->name;
+        $comment->comment_article = $request->article;
         $comment->save();
         return redirect('/articles');
     }
