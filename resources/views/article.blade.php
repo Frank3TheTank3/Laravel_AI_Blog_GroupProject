@@ -36,9 +36,15 @@
                 {{ $hash }}<br>
                 @endforeach
             </div>
-            <div class="sideimage">
-            <img src="/img/{{ $article->img_02 }}" height="150px">
-            </div>
+
+            @if($article->id =='1')
+            <video width="500px" controls>
+                <source src="/img/post-01-ai-google-maps-film-01.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            @endif
+
+
         </div>
 
         <div class="col-6">
@@ -54,25 +60,26 @@
             @endforeach
         </div>
         <div class="col-2">
-           
+
         </div>
     </div>
 </div>
 
-@if (Auth::check()) 
+@if (Auth::check())
 {
-    <div class="p-2 bg-light border rounded-pill text-center">
-        <h2>Say something: </h2>
-        <form action="/articles" method="post">
-            <input type="text" name="title" placeholder="Post-Title">
-            <input type="text" name="content" placeholder="Your message...">
-            <!-- this blade directive is necessary for all form posts somewhere in between
+<div class="p-2 bg-light border rounded-pill text-center">
+    <h2>Say something: </h2>
+    <form action="/articles" method="post">
+        <input type="text" name="title" placeholder="Post-Title">
+        <input type="text" name="content" placeholder="Your message...">
+        <input class="d-none" type="text" name="article" value="{{$article->post_title}}">
+        <!-- this blade directive is necessary for all form posts somewhere in between
                                 the form tags -->
-            @csrf
-            @method('post')
-            <button class="rounded-pill " type="submit">Submit</button>
-        </form>
-    </div>
+        @csrf
+        @method('post')
+        <button class="rounded-pill " type="submit">Submit</button>
+    </form>
+</div>
 }
 @endif
 
@@ -83,24 +90,27 @@
 @foreach ($comments as $comment)
 <div class="p-2 bg-light border rounded-pill text-center">
     <b>
-        <img class="mx-auto d-block" style="width: 50px; border-radius: 50%" src="https://avatars.githubusercontent.com/u/98747637?v=4
-                    " alt="">
-        @if (Auth::check()) {
-        <h1>{{Auth::user()->name}} </h1>
-        }
-        @endif
-        <br>
-        <h1> {{ $comment->comment_title }}: </h1>
-    </b><br>
+        <img class="mx-auto d-block" style="width: 50px; border-radius: 50%" src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="">
 
+
+        <br>
+
+    </b><br>
+    <h1> {{ $comment->comment_title }}: </h1>
     {{ $comment->comment_content }}<br>
 
     {{ $comment->updated_at->diffForHumans() }}
+    @if (Auth::check()) {
+    <h1>{{Auth::user()->name}} </h1>
+    }
+    @endif
+    @if (Auth::check()) {
     <form action="/articles/{{ $comment->id }}" method="post">
         @csrf
         @method('delete')
         <button type="submit">Delete</button>
     </form>
+    @endif
 </div>
 @endforeach
 
