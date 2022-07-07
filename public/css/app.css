@@ -11022,14 +11022,11 @@ select {
 .ml-2 {
   margin-left: 0.5rem;
 }
-.mt-6 {
-  margin-top: 1.5rem;
+.mt-8 {
+  margin-top: 2rem;
 }
 .mr-2 {
   margin-right: 0.5rem;
-}
-.mt-8 {
-  margin-top: 2rem;
 }
 .ml-12 {
   margin-left: 3rem;
@@ -11301,13 +11298,13 @@ select {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .pt-2 {
   padding-top: 0.5rem;
@@ -11329,9 +11326,6 @@ select {
 }
 .pt-1 {
   padding-top: 0.25rem;
-}
-.pt-6 {
-  padding-top: 1.5rem;
 }
 .pt-8 {
   padding-top: 2rem;

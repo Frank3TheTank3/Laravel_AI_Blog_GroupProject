@@ -31,7 +31,7 @@
       <!--<a href="/"><img id="logo" class="img-responsive"  src="img/favicon.png" data-bs-hover-animate="pulse" alt="logo" style="height: 48px;"></a>-->
       <hr>
       <div class="heading">
-        Artifical Intelligence Digital News
+        Artificial Intelligence Digital News
       </div>
       <hr>
     </div>
