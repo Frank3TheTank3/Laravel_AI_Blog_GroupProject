@@ -7,9 +7,12 @@ Aline, Chaimaa, Chantal, Francis (Team Leader), Lu, and Thomas
 ### Mandatory
 Team contract in Google Drive [LINK](https://docs.google.com/document/d/1qksD0JsKhCeg9ig_XURdAi1wQG9xeVNFaiYDEMitX9c/edit?usp=sharing)<br/>
 Data schema in Google Drive [LINK](https://drive.google.com/file/d/1MTOWsFn5Wau7FmI0ldbfUoxnaovpucZX/view?usp=sharing)<br/>
-Taiga [LINK](https://tree.taiga.io/project/bambina-ai/timeline)
+Taiga [LINK](https://tree.taiga.io/project/bambina-ai/timeline)<br>
+Penpot ~~LINK~~
 
 ### Extra's
+Penpot ownership issue #1 as of June 7th [LINK](https://drive.google.com/file/d/12mv7j2pgt1WERUtem3-nqDOSDg_U38PI/view?usp=sharing)</br>
+Penpot ownership issue #2 as of June 7th [LINK](https://drive.google.com/file/d/10RuPjZnl2CCcpJRKXFS2X2nfuW_MsyJY/view?usp=sharing)</br>
 Taiga ownership issues as of June 7th [LINK](https://drive.google.com/file/d/1QgnawuLBg62-_eetXBQEEFUest9qjnte/view?usp=sharing)</br>
 Taiga timeline as of June 7th [LINK](https://drive.google.com/file/d/1oUAGVUvyfRVKfq93_5V6yGmaUv0EoBXL/view?usp=sharing)<br>
 Site images in Google Drive [LINK](https://drive.google.com/drive/folders/1A9vpzOCA5yOLBpVO6_XqbJzZyZndzuIj?usp=sharing)<br/>
