@@ -10961,9 +10961,7 @@ select {
     max-width: 1536px;
   }
 }
-.fixed {
-  position: fixed;
-}
+
 .absolute {
   position: absolute;
 }

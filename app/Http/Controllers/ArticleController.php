@@ -15,11 +15,11 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $comments = Comment::all()->sortByDesc('created_at');
+        $comment = Comment::all()->sortByDesc('created_at');
         $articles = Article::all()->sortByDesc('created_at');
 
 
-        return view('contents', ['articles' => $articles, 'comments' => $comments]);
+        return view('contents', ['articles' => $articles, 'comment' => $comment]);
 
 
     }
