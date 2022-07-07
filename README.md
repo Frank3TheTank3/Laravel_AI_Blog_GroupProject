@@ -9,6 +9,7 @@ Team contract in Google Drive [LINK](https://docs.google.com/document/d/1qksD0Js
 
 ### Extra
 Site images in Google Drive [LINK](https://drive.google.com/drive/folders/1A9vpzOCA5yOLBpVO6_XqbJzZyZndzuIj?usp=sharing)
+A4 Flyer in Google Drive [LINK](https://drive.google.com/file/d/1wnNwF1mQZoN65JZeRrqSLbcxolneaSG2/view?usp=sharing)
 
 ## How to install after cloning the repository?
 
