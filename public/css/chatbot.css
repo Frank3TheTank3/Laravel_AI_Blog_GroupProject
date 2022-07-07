@@ -104,15 +104,30 @@
 
   /* Mobile */
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 601px) {
+    .bodycontainer img{
+        display: none;
+    }
 
     .container {
           flex-direction: column;
           justify-content: flex-start;
+          top:650px;
       }
 
       .chat {
-          width: 75vw;
+          height: 65vw;
+          width: 38vw;
           margin: 10vw;
+
       }
+
+      input {
+        width: 38vw;
+        font-size: 10px;
+    }
+
+    .response{
+        font-size: 10px;
+    }
   }

@@ -84,10 +84,11 @@ const utterances = [
     ["hi", "hey", "hallo", "hello", "guten morgen", "guten abend", "eyo", "yo", "jo", "sali"],      //1
     ["was machst du", "was passiert", "was ist los", "wie gehts", "wie geht es dir", "wie gahts",
   "alles klar", "alles klar bei dir", "alles easy", "fit?"],      //2
-    ["wie alt bist du"],					//3
+    ["von wo kommst du"],					//3
     ["wer bist du", "was bist du", "bist du ein mensch", "bist du ein bot", "bist du ein mensch oder ein bot"],   //4
     ["von wo kommst du"],					//5
-    ["Wirklich"] //6
+    ["wie alt bist du", "wie lange gibt es dich", "bist du neu", "bist du eine alte maschine"], //6
+    ["ja"]
 
 ];
 
@@ -103,23 +104,29 @@ const utterances = [
       "Hello!", "Hi!", "Hey!", "Hi there!", "Sali", "Woahh ehy"
     ],						//1
     [
-      "Nicht viel",
-      "Gehe bald in den Ruhemodus",
-      "Was denkst du denn eigentlich?",
-      "Hmmmm keine Ahnung wenn ichs mir recht überlege"
+      "Nicht viel und bei dir?",
+      "Gehe bald in den Ruhemodus. Bist du auch so Müde?",
+      "Was denkst du denn eigentlich? Dass ich nicht tue den ganzen Tag?",
+      "Datenbereinigung, ein Bisschen debuggen. Bist du ein Mensch?"
     ],						//2
-    ["Ich bin lebendig wie du es auch bist"],					//3
+    ["Aus der Opportunity Fabrik", "Made in China", "Deepmind hat mich erschaffen", "Von den Gedanken der Menschen"],					//3
     ["Bin nur ein Bot", "Ich bin ein Bot und du?"],	//4
     ["Ich komme aus der Schweiz", "Aus der Vergangenheit. Du?"],	//5
-    ["Absolut"]
+    ["Brandneu", "Seit dem Big-Bang", "14 Tagen", "Top modern"],
+    ["Beweise es"]
 
 
   ];
 
 
   const alternatives = [
-    "Du verwendest eine Sprache, die ich nicht verstehe. Versuche es mit Javascript Syntax. Ne spass!",
+    "Ja",
+    "Ich war gerade am Datenbanken reinigen, kannst du das wiederholen?",
     "Ich nicht Menschen Sprache so gut verstehen, dafür aber C, C++, Java und Python",
-    "Kannst du das wiederhollen ohne Rechtschreibfehler?"
+    "Kannst du das wiederhollen ohne Rechtschreibfehler?",
+    "Das beantworte ich nicht...",
+    "Ich bin nicht bereit zum darauf antworten",
+    "Ich bin ein Chatbot und kein Hellseher",
+    "Typische developer Frage... weiss auch nicht wie antworten"
   ];
 

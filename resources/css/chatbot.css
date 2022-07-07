@@ -104,15 +104,20 @@
 
   /* Mobile */
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 601px) {
 
     .container {
           flex-direction: column;
           justify-content: flex-start;
+          top:25px;
       }
 
       .chat {
-          width: 75vw;
+          width: 35vw;
           margin: 10vw;
       }
+
+      input {
+        width: 35vw;
+    }
   }
