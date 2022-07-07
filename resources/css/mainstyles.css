@@ -30,7 +30,7 @@ header{
 }
 
 .containerheight{
-    min-height: 340px;
+    min-height: 375px;
 }
 
 
@@ -92,10 +92,10 @@ header{
 }
 
 
-  
+
   @media only screen and (min-width: 701px) {/*media query*/
     .containerheight {
-        min-height: 400px;
+        min-height: 425px;
     }
   }
 

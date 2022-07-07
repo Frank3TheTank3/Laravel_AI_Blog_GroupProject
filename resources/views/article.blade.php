@@ -97,18 +97,21 @@
 
     </b><br>
     <h1> {{ $comment->comment_title }}: </h1>
-    {{ $comment->comment_content }}<br>
+    <br>
+    {{ $comment->comment_content }}
+    <br><br>
 
     {{ $comment->updated_at->diffForHumans() }}
-    @if (Auth::check()) {
-    <h1>{{Auth::user()->name}} </h1>
-    }
+    <br>
+    @if (Auth::check())
+    <h1>User: {{Auth::user()->name}} </h1>
     @endif
-    @if (Auth::check()) {
+    <br>
+    @if (Auth::check())
     <form action="/articles/{{ $comment->id }}" method="post">
         @csrf
         @method('delete')
-        <button type="submit">Delete</button>
+        <button class="btn btn-warning" type="submit">Delete</button>
     </form>
     @endif
 </div>
