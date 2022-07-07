@@ -4,7 +4,12 @@
 Team members:
 Aline, Chaimaa, Chantal, Francis (Team Leader), Lu, and Thomas
 
-Team contract in #AI team Google Drive [link](https://docs.google.com/document/d/1qksD0JsKhCeg9ig_XURdAi1wQG9xeVNFaiYDEMitX9c/edit?usp=sharing).
+### Mandatory
+Team contract in Google Drive [LINK](https://docs.google.com/document/d/1qksD0JsKhCeg9ig_XURdAi1wQG9xeVNFaiYDEMitX9c/edit?usp=sharing) / Data schema in Google Drive [LINK](https://drive.google.com/file/d/1MTOWsFn5Wau7FmI0ldbfUoxnaovpucZX/view?usp=sharing)
+
+### Extra
+Site images in Google Drive [LINK](https://drive.google.com/drive/folders/1A9vpzOCA5yOLBpVO6_XqbJzZyZndzuIj?usp=sharing) / 
+A4 Flyer in Google Drive [LINK](https://drive.google.com/file/d/1wnNwF1mQZoN65JZeRrqSLbcxolneaSG2/view?usp=sharing)
 
 ## How to install after cloning the repository?
 
