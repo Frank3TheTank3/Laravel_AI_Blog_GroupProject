@@ -9,7 +9,7 @@ Team contract in Google Drive [LINK](https://docs.google.com/document/d/1qksD0Js
 Data schema in Google Drive [LINK](https://drive.google.com/file/d/1MTOWsFn5Wau7FmI0ldbfUoxnaovpucZX/view?usp=sharing)<br/>
 Taiga [LINK](https://tree.taiga.io/project/bambina-ai/timeline)
 
-### Extra
+### Extra's
 Taiga ownership issues as of June 7th [LINK](https://drive.google.com/file/d/1QgnawuLBg62-_eetXBQEEFUest9qjnte/view?usp=sharing)</br>
 Taiga timeline as of June 7th [LINK](https://drive.google.com/file/d/1oUAGVUvyfRVKfq93_5V6yGmaUv0EoBXL/view?usp=sharing)<br>
 Site images in Google Drive [LINK](https://drive.google.com/drive/folders/1A9vpzOCA5yOLBpVO6_XqbJzZyZndzuIj?usp=sharing)<br/>
