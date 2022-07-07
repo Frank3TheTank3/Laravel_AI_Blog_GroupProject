@@ -30,7 +30,7 @@ header{
 }
 
 .containerheight{
-    min-height: 300px;
+    min-height: 340px;
 }
 
 
@@ -63,9 +63,10 @@ header{
 
 }
 
-.hastag{
+.hashtag{
     color: #ff914d;
     font-weight: bolder;
+    font-size: 18px;
 }
 
 .postimage img{
