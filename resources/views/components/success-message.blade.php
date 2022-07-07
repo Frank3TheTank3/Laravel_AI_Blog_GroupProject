@@ -1,13 +1,11 @@
-@if ($errors->any())
+@if (session('message'))
     <div {{ $attributes }}>
-        <div class="font-medium text-red-600">
+        <div class="font-medium text-green-600">
             {{ __('Success') }}
         </div>
 
-        <ul class="mt-3 list-disc list-inside text-sm text-red-600">
-            @foreach ($errors->all() as $error)
-                <li>{{ 'message' }}</li>
-            @endforeach
-        </ul>
+        <div class="mt-3 list-disc list-inside text-sm text-green-600">
+                {{ session('message') }}
+        </div>
     </div>
 @endif

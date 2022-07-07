@@ -19,10 +19,10 @@
 
 <body>
 
-  
+
   <!-- banner - commented by lu-meili-->
   <header class="fixed">
-    
+
     <div>
       <img src="{{('/img/header-banner.png')}}" alt="this is a banner">
     </div>
@@ -95,15 +95,15 @@
 
 <!--FOOTER-->
 <footer>
-  <video src="{{('img/footerVid.mp4')}}" class="footer" type="video/mp4" class="d-block w-100" autoplay loop muted>
+  <video src="{{('/img/footerVid.mp4')}}" class="footer" type="video/mp4" class="d-block w-100" autoplay loop muted>
   </video>
   <b>&copy; #AI Team - Opportunity Program - Zürich, July 7th 2002
    </b>
   </div>
 </footer>
-   
-    
-  
+
+
+
 
 </body>
 

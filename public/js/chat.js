@@ -10,7 +10,7 @@ inputField.addEventListener("keydown", (e) => {
 });
 
 //Use input as output source
-function output(input) { 
+function output(input) {
   let product;
   let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
   text = text
@@ -27,7 +27,7 @@ function output(input) {
   if (compare(utterances, answers, text)) {
     // Search for exact match in triggers
     product = compare(utterances, answers, text);
-  } 
+  }
   else {
     product = alternatives[Math.floor(Math.random() * alternatives.length)];
   }
@@ -79,20 +79,20 @@ function addChatEntry(input, product) {
 }
 
 
-const utterances = [ 
-    ["wie gehts", "wie laufts", "gehts gut", ""],        //0
+const utterances = [
+    ["wie gehts", "wie laufts", "gehts gut", "alles klar", "alles ok", "wie gahts", "was lauft"],        //0
     ["hi", "hey", "hallo", "hello", "guten morgen", "guten abend", "eyo", "yo", "jo", "sali"],      //1
     ["was machst du", "was passiert", "was ist los", "wie gehts", "wie geht es dir", "wie gahts",
   "alles klar", "alles klar bei dir", "alles easy", "fit?"],      //2
     ["wie alt bist du"],					//3
-    ["wer bist du", "bist du ein mensch", "bist du ein bot", "bist du ein mensch oder ein bot"],   //4
+    ["wer bist du", "was bist du", "bist du ein mensch", "bist du ein bot", "bist du ein mensch oder ein bot"],   //4
     ["von wo kommst du"],					//5
-    ["!"] //6
-    
+    ["Wirklich"] //6
+
 ];
-   
-  
-   
+
+
+
   const answers = [
      [
       "Super... und dir?",
@@ -111,31 +111,15 @@ const utterances = [
     ["Ich bin lebendig wie du es auch bist"],					//3
     ["Bin nur ein Bot", "Ich bin ein Bot und du?"],	//4
     ["Ich komme aus der Schweiz", "Aus der Vergangenheit. Du?"],	//5
-    [""]
-  
-   
+    ["Absolut"]
+
+
   ];
-   
-   
+
+
   const alternatives = [
-    "Was...",
-    "Nicht verstanden",
+    "Du verwendest eine Sprache, die ich nicht verstehe. Versuche es mit Javascript Syntax. Ne spass!",
+    "Ich nicht Menschen Sprache so gut verstehen, dafür aber C, C++, Java und Python",
+    "Kannst du das wiederhollen ohne Rechtschreibfehler?"
   ];
-  
-  const SerpApi = require('google-search-results-nodejs');
-  const search = new SerpApi.GoogleSearch("6ff037402b3c1a4fbe0eb6ec7c1b91415780282144d83f108ab35f22d219daa7");
-  
-  const params = {
-    q: "Coffee",
-    location: "Zurich, Switzerland",
-    hl: "ger",
-    google_domain: "google.com"
-  };
-  
-  const callback = function(data) {
-    console.log(data);
-  };
-  
-  // Show result as JSON
-  search.json(params, callback);
-  
+
