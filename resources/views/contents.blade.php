@@ -8,10 +8,6 @@
   
   </div>
 
-  <div class="container section">
-      LATEST NEWS
-    </div>
-
   @foreach ($articles as $article)
 
   <a href="/articles/{{ $article->id }}">
